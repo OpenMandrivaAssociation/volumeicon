@@ -1,6 +1,5 @@
-%define distsuffix edm
 %define	name	volumeicon
-%define	version	0.2.1
+%define	version	0.4.1
 %define	release	%mkrel	1
 
 Summary:	Lightweight volume control
@@ -11,14 +10,10 @@ Group:		Graphical desktop/Other
 License:	GPLv3
 URL:		http://www.softwarebakery.com/maato/home.html
 Source:         http://www.softwarebakery.com/maato/home.html/%{name}-%{version}.tar.gz
+Patch0:		volumeicon_lxde.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	gtk2-devel
-%ifarch i586
-Buildrequires: libalsa2-devel
-%endif
-%ifarch x86_64
-BuildRequires: lib64alsa2-devel
-%endif
+Buildrequires: 	%{_lib}alsa-devel
 
 Obsoletes: %name < %version
 
@@ -35,6 +30,7 @@ Features
 
 %prep
 %setup -q 
+%patch0 -p0
 
 %build
 %configure2_5x 
@@ -42,7 +38,7 @@ Features
 %make 
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
 mkdir -p %{buildroot}%_sysconfdir/xdg/autostart/
 cat > %{buildroot}%_sysconfdir/xdg/autostart/%{name}.desktop << EOF
@@ -58,8 +54,7 @@ Categories=AudioVideo;Audio;X-MandrivaLinux-Multimedia-Sound
 EOF
 
 %clean
-rm -rf $RPM_BUILD_ROOT
-
+rm -rf %{buildroot}
 
 %files 
 %defattr(-,root,root)
