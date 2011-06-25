@@ -1,6 +1,6 @@
 %define	name	volumeicon
 %define	version	0.4.1
-%define	release	%mkrel	2
+%define	release	%mkrel	3
 
 Summary:	Lightweight volume control
 Name:		%{name}
@@ -57,14 +57,14 @@ Icon=%{_datadir}/%{name}/gui/appicon.svg
 Categories=AudioVideo;Audio;X-MandrivaLinux-Multimedia-Sound
 EOF
 
+%find_lang %{name}
+
 %clean
 rm -rf %{buildroot}
 
-%files 
+%files -f %{name}.lang
 %defattr(-,root,root)
 %doc AUTHORS COPYING ChangeLog
 %_sysconfdir/xdg/autostart/%{name}.desktop
 %{_bindir}/%{name}
 %{_datadir}/%{name}
-
-
