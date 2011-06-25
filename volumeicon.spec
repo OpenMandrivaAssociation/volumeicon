@@ -12,7 +12,7 @@ URL:		http://www.softwarebakery.com/maato/home.html
 Source:         http://www.softwarebakery.com/maato/home.html/%{name}-%{version}.tar.gz
 Patch0:		volumeicon_lxde.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	gtk2-devel
+BuildRequires:	gtk2-devel intltool
 %if %mdvver >= 201100 
 Buildrequires: 	%{_lib}alsa-devel
 %else
