@@ -1,6 +1,6 @@
 %define	name	volumeicon
 %define	version	0.4.1
-%define	release	%mkrel	3
+%define	release	%mkrel	4
 
 Summary:	Lightweight volume control
 Name:		%{name}
