@@ -1,6 +1,6 @@
 %define	name	volumeicon
-%define	version	0.4.1
-%define	release	%mkrel	4
+%define	version	0.4.3
+%define	release	%mkrel	1
 
 Summary:	Lightweight volume control
 Name:		%{name}
@@ -12,7 +12,7 @@ URL:		http://www.softwarebakery.com/maato/home.html
 Source:         http://www.softwarebakery.com/maato/home.html/%{name}-%{version}.tar.gz
 Patch0:		volumeicon_lxde.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	gtk2-devel intltool
+BuildRequires:	gtk2-devel intltool %{_lib}notify-devel
 %if %mdvver >= 201100 
 Buildrequires: 	%{_lib}alsa-devel
 %else
@@ -37,7 +37,7 @@ Features
 %patch0 -p0
 
 %build
-%configure2_5x 
+%configure2_5x
        
 %make 
 
