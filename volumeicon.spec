@@ -1,6 +1,6 @@
 %define	name	volumeicon
 %define	version	0.4.3
-%define	release	%mkrel	1
+%define	release	%mkrel 2
 
 Summary:	Lightweight volume control
 Name:		%{name}
@@ -8,8 +8,8 @@ Version:	%{version}
 Release:	%{release}
 Group:		Graphical desktop/Other
 License:	GPLv3
-URL:		http://www.softwarebakery.com/maato/home.html
-Source:         http://www.softwarebakery.com/maato/home.html/%{name}-%{version}.tar.gz
+URL:		http://http://code.google.com/p/mandriva-lxde/
+Source:         http://mandriva-lxde.googlecode.com/files/%{name}-%{version}.tar.gz
 Patch0:		volumeicon_lxde.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	gtk2-devel intltool %{_lib}notify-devel
@@ -31,6 +31,8 @@ Features
 * Several icon themes (with gtk theme as default)
 * Configurable external mixer
 * Volume Slider
+
+This is localized fork from Mandriva LXDE project
 
 %prep
 %setup -q 
