@@ -11,6 +11,7 @@ License:	GPLv3
 URL:		http://http://code.google.com/p/mandriva-lxde/
 Source:         http://mandriva-lxde.googlecode.com/files/%{name}-%{version}.tar.gz
 Patch0:		volumeicon_lxde.patch
+Patch1:		volumeicon-0.4.3-glib-include.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	gtk2-devel intltool %{_lib}notify-devel
 %if %mdvver >= 201100 
@@ -37,6 +38,7 @@ This is localized fork from Mandriva LXDE project
 %prep
 %setup -q 
 %patch0 -p1
+%patch1 -p1
 
 %build
 %configure2_5x
