@@ -1,0 +1,36 @@
+--- volumeicon-0.4.3/src/config.c.old	2011-08-06 11:29:22.000000000 +0400
++++ volumeicon-0.4.3/src/config.c	2011-12-23 12:39:53.982938554 +0400
+@@ -45,11 +45,11 @@
+ static gchar * m_hotkey_down = NULL;
+ static gchar * m_hotkey_mute = NULL;
+ static int m_stepsize = 0;
+-static gboolean m_lmb_slider = FALSE;
++static gboolean m_lmb_slider = TRUE;
+ static gboolean m_mmb_mute = FALSE;
+-static gboolean m_hotkey_up_enabled = FALSE;
+-static gboolean m_hotkey_down_enabled = FALSE;
+-static gboolean m_hotkey_mute_enabled = FALSE;
++static gboolean m_hotkey_up_enabled = TRUE;
++static gboolean m_hotkey_down_enabled = TRUE;
++static gboolean m_hotkey_mute_enabled = TRUE;
+ 
+ //##############################################################################
+ // Static functions
+@@ -57,7 +57,7 @@
+ static void config_load_default()
+ {
+ 	if(!m_helper_program)
+-		config_set_helper("xterm -e 'alsamixer'");
++		config_set_helper("lxterminal -e 'alsamixer'");
+ 	if(!m_channel)
+ 		config_set_channel(NULL);
+ 	if(!m_card)
+@@ -65,7 +65,7 @@
+ 	if(!m_stepsize)
+ 		config_set_stepsize(5);
+ 	if(!m_theme)
+-		config_set_theme("Default");
++		config_set_theme("White Gnome");
+ 	if(!m_hotkey_up)
+ 		config_set_hotkey_up("XF86AudioRaiseVolume");
+ 	if(!m_hotkey_down)

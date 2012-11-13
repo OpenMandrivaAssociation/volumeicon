@@ -1,0 +1,30 @@
+--- volumeicon-0.4.3/src/alsa_backend.c.old	2011-12-23 13:04:39.545319964 +0400
++++ volumeicon-0.4.3/src/alsa_backend.c	2011-12-23 13:08:55.431065874 +0400
+@@ -22,11 +22,7 @@
+ //##############################################################################
+ 
+ #include <alsa/asoundlib.h>
+-#include <glib/gstring.h>
+-#include <glib/gstdio.h>
+-#include <glib/glist.h>
+-#include <glib/giochannel.h>
+-
++#include <glib.h>
+ #include "alsa_backend.h"
+ 
+ //##############################################################################
+--- volumeicon-0.4.3/src/oss_backend.c.old	2011-12-23 13:08:36.662744629 +0400
++++ volumeicon-0.4.3/src/oss_backend.c	2011-12-23 13:09:07.892615203 +0400
+@@ -26,11 +26,7 @@
+ #include <fcntl.h>
+ #include <assert.h>
+ #include <stdlib.h>
+-#include <glib/gstring.h>
+-#include <glib/gstdio.h>
+-#include <glib/glist.h>
+-#include <glib/giochannel.h>
+-
++#include <glib.h>
+ #include "oss_backend.h"
+ 
+ //##############################################################################
