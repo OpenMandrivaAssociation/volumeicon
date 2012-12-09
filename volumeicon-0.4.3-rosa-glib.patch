@@ -1,0 +1,16 @@
+Index: volumeicon-0.4.3/src/alsa_backend.c
+===================================================================
+--- volumeicon-0.4.3.orig/src/alsa_backend.c
++++ volumeicon-0.4.3/src/alsa_backend.c
+@@ -22,10 +22,8 @@
+ //##############################################################################
+ 
+ #include <alsa/asoundlib.h>
+-#include <glib/gstring.h>
++#include <glib.h>
+ #include <glib/gstdio.h>
+-#include <glib/glist.h>
+-#include <glib/giochannel.h>
+ 
+ #include "alsa_backend.h"
+ 
