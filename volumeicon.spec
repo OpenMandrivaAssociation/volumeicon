@@ -1,7 +1,7 @@
 Summary:	Lightweight volume control
 Name:		volumeicon
 Version:	0.4.6
-Release:	4
+Release:	5
 Group:		Graphical desktop/Other
 License:	GPLv3
 URL:		http://softwarebakery.com/maato/volumeicon.html
