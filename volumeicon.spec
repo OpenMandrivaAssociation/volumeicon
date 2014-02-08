@@ -1,7 +1,7 @@
 Summary:	Lightweight volume control
 Name:		volumeicon
 Version:	0.4.3
-Release:	3
+Release:	4
 Group:		Graphical desktop/Other
 License:	GPLv3
 Url:		http://http://code.google.com/p/mandriva-lxde/
