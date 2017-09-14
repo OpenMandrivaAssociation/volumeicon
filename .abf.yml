@@ -1,4 +1,5 @@
 removed_sources:
   volumeicon-0.4.3.tar.gz: 81bfff9ba0c707765365a004170e79335c598b66
-sources:
   volumeicon-0.4.6.tar.gz: e9f02e80903e0cd0e99aca0f508a150c0f1f501f
+sources:
+  volumeicon-0.5.1.tar.gz: 000bb7ab3ccb72c9262462c4d6b5025e09637ecf
