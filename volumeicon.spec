@@ -4,7 +4,7 @@ Version:	0.5.1
 Release:	1
 Group:		Graphical desktop/Other
 License:	GPLv3
-URL:		http://softwarebakery.com/maato/volumeicon.html
+URL:		https://softwarebakery.com/maato/volumeicon.html
 Source0:        http://softwarebakery.com/maato/files/volumeicon/%{name}-%{version}.tar.gz
 #Patch0:		glib.h_include.patch
 
