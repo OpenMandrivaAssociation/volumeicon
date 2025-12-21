@@ -8,6 +8,11 @@ URL:		https://softwarebakery.com/maato/volumeicon.html
 Source0:        http://softwarebakery.com/maato/files/volumeicon/%{name}-%{version}.tar.gz
 #Patch0:		glib.h_include.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  intltool
 BuildRequires:  pkgconfig(alsa)
 BuildRequires:  pkgconfig(gtk+-3.0)
